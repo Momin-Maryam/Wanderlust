@@ -1,0 +1,47 @@
+<% layout("/layouts/boilerplate") -%>
+
+
+<div class="containerS backS ">
+    <div class="user col-7 offset-3 ">New user? <span class="newUser"><strong>Sign Up </strong></span></div>
+    <div class="formS formBack">
+        <form action="/signup" method="POST" class="needs-validation" novalidate>
+          
+            <div class="inputBoxS inputBoxBackS" >
+                <label for="email"><i class="fa-solid fa-envelope"></i></label>
+                <input   
+                type="email" 
+                placeholder="Email id" 
+                class="inputS" 
+                id="email" 
+                name="email" 
+                required>
+                <div class="valid-feedback">Looks Good!</div>
+                <div class="invalid-feedback">Please enter a valid email address.</div>
+            </div>
+            <div class="inputBoxS inputBoxBackS">
+                <label for="username"><i class="fa-solid fa-user"></i></label>
+                <input type="text"
+                 placeholder="Username"
+                 class="inputS" 
+                 id="username" 
+                 name="username" 
+                 required>
+                 <div class="valid-feedback">Looks Good!</div>
+                 <div class="invalid-feedback">Please enter a valid username.</div>
+            </div>
+            <div class="inputBoxS inputBoxBackS">
+                <label for="password"><i class="fa-solid fa-lock"></i></label>
+                <input type="password"
+                 placeholder="Password"
+                  class="inputS"
+                   id="password"
+                    name="password"
+                    required >
+                    <div class="valid-feedback">Looks Good!</div>
+                    <div class="invalid-feedback">Please enter strong Password.</div>
+            </div>
+            <button type="submit" class="btnS btnBackS">Sign Up</button>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,33 @@
+<% layout("/layouts/boilerplate") -%>
+
+
+<div class="containerS backS ">
+    <div class="user col-7 offset-2 ">Existing User? <span class="newUser"><strong>Login</strong></span></div>
+    <div class="formS formBack">
+        <form action="/login" method="POST" class="needs-validation" novalidate>
+          
+            <div class="inputBoxS inputBoxBackS">
+                <label for="username"><i class="fa-solid fa-user"></i></label>
+                <input type="text"
+                 placeholder="Username"
+                 class="inputS" 
+                 id="username" 
+                 name="username" 
+                 required>
+                 <div class="invalid-feedback">Please enter your username.</div>
+            </div>
+            <div class="inputBoxS inputBoxBackS">
+                <label for="password"><i class="fa-solid fa-lock"></i></label>
+                <input type="password"
+                 placeholder="Password"
+                  class="inputS"
+                   id="password"
+                    name="password"
+                    required >
+                    <div class="invalid-feedback">Please enter your Password.</div>
+            </div>
+            <button type="submit" class="btnS btnBackS">Login</button>
+
+        </form>
+    </div>
+</div>

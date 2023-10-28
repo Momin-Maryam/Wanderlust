@@ -1,0 +1,70 @@
+<% layout("/layouts/boilerplate") -%>
+<body><a href="mailto:"></a>
+
+    <form action="/listings" method="POST" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-6 offset-3">
+                <br><br>
+                <h3 class="heading">Create a new listing</h3>
+        <div>
+            <label for="title" class="form-label">Title</label>
+            <input id="title" type="text" name="listing[title]" placeholder="enter title" class="form-control" required>
+            <div class="valid-feedback">Title looks good!</div>
+            <div class="invalid-feedback">Please enter a title</div>
+        </div>
+        <div>
+            <label for="description" class="form-label">Description</label>
+            <textarea name="listing[description]" id="description" cols="30" rows="5" class="form-control" required></textarea>
+            <div class="invalid-feedback">please enter a description</div>
+        </div>
+       <div>
+       <div>
+        <label for="image" class="form-label" >Upload Image</label>
+        <input type="file" name="listing[image]" class="form-control" required >
+      
+       </div>
+       <div>
+        <label for="price" class="form-label">Price</label>
+        <input  name="listing[price]" required placeholder="enter price" class="form-control" id="price">
+       </div>
+       <div> 
+        <!-- <div>
+
+       <label for="category" >Select a category:</label>
+
+       <select id="category" required class="form-control" >
+         <option value="listing[category]">Museams</option>
+         <option value="listing[category]">Beach</option>
+         <option value="listing[category]">Iconic Cities</option>
+         <option value="listing[category]">Camping</option>
+         <option value="listing[category]">Arctic</option>
+         <option value="listing[category]">Mountain</option>
+         <option value="listing[category]">Castle</option>
+         <option value="listing[category]">Boats</option>
+         <option value="listing[category]">Play</option>
+         <option value="listing[category]">Chef's Kitchen</option>
+         <option value="listing[category]">Skiing</option>
+       </select>
+    </div> -->
+        <div class="row ">
+            <div  class="col-md-6">
+            <label for="location" class="form-label">Location</label>
+            <input type="text" name="listing[location]" required placeholder="enter location" class="form-control" id="location">
+            <div class="invalid-feedback">This field cannot be empty</div>
+           
+           </div>
+           <div  class="col-md-6">
+            <label for="country" class="form-label">Country</label>
+            <input type="text" name="listing[country]" required placeholder="enter country" class="form-control" id=country>
+            <div class="invalid-feedback">This field cannot be empty</div>
+           </div>
+        </div>
+  
+        <br><br>
+        <button class="form-button offset-5">Add</button>
+        <br> <br>
+    </form>
+</div>
+</div>
+
+</body>

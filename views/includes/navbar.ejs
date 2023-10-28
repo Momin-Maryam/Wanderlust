@@ -1,0 +1,66 @@
+<style>
+
+
+.search-container {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+#searchInput {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    width: 300px; /* Adjust the width as needed */
+}
+
+.search-button {
+    padding: 10px;
+    border: none;
+    background-color: #fe424d;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 0 20px 20px 0;
+}
+</style>
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listings"><i class="fa-regular fa-compass"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+
+        <a class="nav-link" href="/listings">Explore</a>
+      </div>
+
+<div class="navbar-nav ms-auto">
+  <form id="searchForm">
+    <div class="search-container">
+        <label for="searchInput" class="visually-hidden">Search:</label>
+        <input type="text" id="searchInput" placeholder="Type your search...">
+        <button type="submit" class="search-button"><i class="fas fa-search"></i></button>
+    </div>
+</form>
+</div>
+
+
+
+
+        <div class="navbar-nav ms-auto">
+          <a class="nav-link" href="/listings/new">Airbnb your home</a>
+      <%  if(!currUser){ %>
+        <a class="nav-link"  href="/signup"><b>Sign up </b></a>
+        <a class="nav-link" href="/login"><b>Login</b></a>
+        <% } %>
+       <%  if(currUser){ %> 
+            <a class="nav-link" href="/logout">Logout</a>
+       <% } %>
+        </div>
+    </div>
+  </div>
+</nav>
